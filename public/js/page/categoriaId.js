@@ -108,7 +108,7 @@ export default ()=>{
             const value    = data[ key.key ]
 
             if( unique == 'total_productos' ) {
-                html =  `<a href="#/marca/${ data.id }/productos" class="a_86k6e4u">${ value } productos</a>`
+                html =  `<a href="#/categoria/${ data.id }/productos" class="a_86k6e4u">${ value } productos</a>`
             } 
             
             else {
