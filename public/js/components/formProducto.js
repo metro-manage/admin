@@ -132,6 +132,8 @@ console.log(data);
                 containerImageElement.style.display = 'flex'
             })
             fileLoad.start()
+
+            deleteNameImg = false
         }
         
     })
