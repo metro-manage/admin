@@ -68,7 +68,7 @@ export default ()=>{
 
         elementItemData.innerHTML = Data.map( data => {
             return `
-            <a href="#/marca/${ data.id }" class="a_item pointer">
+            <a href="#/categoria/${ data.id }" class="a_item pointer">
                 ${ data.name }
                 ${ Icon.get('fi fi-rr-angle-small-right') }
             </a>
