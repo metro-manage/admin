@@ -2,7 +2,7 @@
     "theme_color": "#F7F7F7",
     "background_color": "#F7F7F7",
     "display": "standalone",
-    "scope": "/",
+    "scope": "",
     "start_url": "index.html",
     "name": "mi app",
     "short_name": "app manage",
