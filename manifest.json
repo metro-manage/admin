@@ -4,8 +4,8 @@
     "display": "standalone",
     "scope": "",
     "start_url": "index.html",
-    "name": "mi app",
-    "short_name": "app manage",
+    "name": "app administrador",
+    "short_name": "administrador",
     "description": "manejo de inventario, asistencia",
     "icons": [
         {
