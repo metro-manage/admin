@@ -148,6 +148,7 @@ export default ()=>{
         const queries = {
             token : localStorage.getItem('auth-token'),
             query : 1,
+            query_limit : 50,
             id_asistencia : params.id,
         }
 

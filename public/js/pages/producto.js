@@ -15,7 +15,7 @@ export default ()=>{
             <header class="header_N8p7RP6">
                     
                 <div class="div_349Zfgp scroll-h">
-                    <a href="#/" class="button_0530xdO pointer">${ Icon.get('fi fi-rr-angle-left') }</a>
+                    <a href="#/inventario" class="button_0530xdO pointer">${ Icon.get('fi fi-rr-angle-left') }</a>
                     <h4 class="text-ellipsis">Productos</h4>
                 </div>
 
@@ -138,7 +138,7 @@ export default ()=>{
         const queries = {
             token : localStorage.getItem('auth-token'),
             query : 1,
-            query_limit : '0, 50' ,
+            query_limit : 50,
         }
 
         fetch( api(`/api/producto?${ paramQueries(queries) }`) )

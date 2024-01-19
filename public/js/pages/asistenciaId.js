@@ -220,8 +220,9 @@ export default ( params )=>{
 
         const queries = {
             token : localStorage.getItem('auth-token'),
-            query : 1,
+            query : [1, 2].join(','),
             query_order : 'datetime, desc',
+            query_limit : 50,
             id_asistencia : params.id,
             datetime : datetimeToday( datetime )
         }
@@ -268,7 +269,7 @@ export default ( params )=>{
 
         const queries = {
             token : localStorage.getItem('auth-token'),
-            query : 1,
+            query : 0,
             query_limit: 'one',
             id    : params.id
         }

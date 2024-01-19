@@ -91,8 +91,7 @@ export default ()=>{
         const queries = {
             token : localStorage.getItem( 'auth-token' ),
             query : 0,
-            limit : 50,
-            
+            query_limit : 50,
         }
 
         fetch( api(`/api/asistencia?${ paramQueries( queries ) }`) )

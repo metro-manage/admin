@@ -217,7 +217,7 @@ export default ()=>{
 
         const queries = {
             token : localStorage.getItem( 'auth-token' ),
-            query : 1,
+            query : 0,
             query_limit : 'one',
             uid    : user.uid,
         }

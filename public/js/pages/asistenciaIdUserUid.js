@@ -184,7 +184,7 @@ export default ( params )=>{
 
         const queries = {
             token : localStorage.getItem('auth-token'),
-            query : 2,
+            query : [0, 2].join(','),
             query_order     : 'datetime, desc',
             id_asistencia   : params.id,
             uid_user   : params.uid_user,
@@ -226,7 +226,7 @@ export default ( params )=>{
 
         const queries = {
             token : localStorage.getItem('auth-token'),
-            query : 2,
+            query : [2, 1].join(','),
             query_limit: 'one',
             id_asistencia    : params.id,
             uid_user    : params.uid_user

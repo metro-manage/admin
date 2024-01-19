@@ -23,8 +23,8 @@ import producto from "../pages/producto.js";
 import productoId from "../pages/productoId.js";
 
 export default ()=>{
-    const Route = new Hash()
 
+    const Route = new Hash()
     Route.param('/', ()=> routesPrivate( inicio ))
     Route.param('/login', ()=> routesPublic( login ))
     Route.param('/inventario', ()=> routesPrivate( inventario ))
@@ -41,5 +41,15 @@ export default ()=>{
     Route.param('/producto', ()=> routesPrivate( producto ))
     Route.param('/producto/:id', (params)=> routesPrivate( productoId, params ))
 
-    Route.dispatch()
+    const main = ele.create('<main class="main" id="main"></main>')
+
+    main.append( Route.dispatch() )
+    
+    addEventListener('hashchange', ()=> {
+        main.innerHTML = ''
+        main.append( Route.dispatch() )
+    })
+
+    return main
+ 
 } 

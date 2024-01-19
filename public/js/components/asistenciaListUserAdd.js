@@ -104,7 +104,7 @@ export default ()=>{
 
         const queries = {
             token : localStorage.getItem('auth-token'),
-            query : 2,
+            query : [0, 2].join(','),
             id_asistencia : params.id,
         }
 

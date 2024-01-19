@@ -113,8 +113,9 @@ export default ()=>{
             } ) 
     })
 
-    addEventListener('eNavigate', ()=> {
-        
+    addEventListener('popstate', ()=> {
+        ElementComponent.remove()
+
         elementUser.innerHTML = `
             <img src="${ api(`/storage/user/${ window.dataApp.user.avatar || 'avatar.png' }`) }">
             <div>
@@ -122,11 +123,7 @@ export default ()=>{
                 <p class="text-ellipsis">${ Position.find( position => position.id ==  window.dataApp.user.position).name }</p>
             </div>
         `
-
-        //elementUser.setAttribute('href', `#/user/${ window.dataApp.user.uid }`)
     })
-    
-    addEventListener('popstate', ()=> ElementComponent.remove())
 
     return ElementComponent
 }

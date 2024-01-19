@@ -71,7 +71,6 @@ export default (login = true)=>{
             fetch( api(`/api/auth?${ paramQueries( queries ) }`), { method : 'POST', body : JSON.stringify( data ) } )
                 .then( res => res.json() )
                 .then(res => {
-
                     if( res.status) { 
                         localStorage.setItem('auth-token', res.token)
                         location.hash = '#/'

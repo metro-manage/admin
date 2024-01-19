@@ -180,15 +180,16 @@ export default ( params )=>{
 
         const queries = {
             token : localStorage.getItem( 'auth-token' ),
-            query : 2,
-            id    : params.id,
+            query : 1,
             query_limit : 'one',
+            id    : params.id,
+            
         }
 
         fetch( api(`/api/producto?${ paramQueries( queries ) }`) )
             .then( res => res.json() )
             .then( dataRenderElementItem )
-
+        
     }
 
     dataRenderElementItem(0)
