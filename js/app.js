@@ -6120,6 +6120,9 @@ var formMarca = ( parameters = {} )=>{
     const link      = window.dataApp.link;
     const def       = window.dataApp.def;
 
+
+    console.log(parameters.data.status);
+
     const $element = createNodeElement(`
         <div class="div_EVs4DJ6">
            <div id="closeElement" class="div_v7jb1Bq"></div>
@@ -6133,6 +6136,10 @@ var formMarca = ( parameters = {} )=>{
                         <label class="label_QU7RI1w">
                             <span>nombre</span>
                             <input type="text" name="name" value="${ parameters.data.name ?? '' }">
+                        </label>
+                        <label class="label_EyS0ZS4">
+                            <span>habilitar</span>
+                            <input type="checkbox" name="status" ${ !!parameters.data.status ? 'checked' : '' }>
                         </label>
                     </div>
                 </div>
@@ -6154,8 +6161,11 @@ var formMarca = ( parameters = {} )=>{
 
         const data = {
             id_inventario : params.id_inventario,
-            name : $elements.form.name.value.trim()
+            name    : $elements.form.name.value.trim(),
+            status  : $elements.form.status.checked ? 1 : 0
         };
+
+        // return console.log(data);
 
         const queries = {
             token : user.token
